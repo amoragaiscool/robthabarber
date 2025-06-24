@@ -1,50 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rob Tha Barber</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rob Tha Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f9f9f9;
+      color: #111;
+    }
+    header {
+      background: black;
+      color: gold;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      height: 80px;
+    }
+    .hero {
+      background: url('hero.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero a {
+      background: gold;
+      color: black;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .service {
+      background: #fff;
+      padding: 1.5rem;
+      border: 2px solid gold;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .reviews, .contact {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: black;
+      color: gold;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Rob Tha Barber Logo" class="logo">
-        <h1>Rob Tha Barber</h1>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about">
-        <h2>About</h2>
-        <p>Professional barber with years of experience providing top-notch fades, tapers, and grooming services.</p>
-    </section>
-    <section id="services">
-        <h2>Services & Pricing</h2>
-        <ul>
-            <li>Haircut - $25</li>
-            <li>Beard Trim - $15</li>
-            <li>Haircut & Beard - $35</li>
-        </ul>
-    </section>
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <p>Photos coming soon.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <textarea placeholder="Your message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <footer>
-        <p>Follow Rob on social media</p>
-    </footer>
+  <header>
+    <img src="logo.png" alt="Rob Tha Barber Logo">
+  </header>
+
+  <section class="hero">
+    <h1>Stay Sharp with Rob Tha Barber</h1>
+    <a href="#contact">Book Now</a>
+  </section>
+
+  <section class="section about">
+    <h2>About Rob</h2>
+    <p>Rob is a skilled barber with years of experience in delivering clean fades, tight tapers, and the sharpest beard work in town. Whether you're prepping for a big event or just want to feel fresh, Rob's got you covered.</p>
+  </section>
+
+  <section class="section">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Fade</h3>
+        <p>$35</p>
+      </div>
+      <div class="service">
+        <h3>Beard Trim</h3>
+        <p>$20</p>
+      </div>
+      <div class="service">
+        <h3>Full Service</h3>
+        <p>$50</p>
+      </div>
+      <div class="service">
+        <h3>Line-Up</h3>
+        <p>$15</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="cut1.jpg" alt="Haircut 1">
+      <img src="cut2.jpg" alt="Haircut 2">
+      <img src="cut3.jpg" alt="Haircut 3">
+    </div>
+  </section>
+
+  <section class="section reviews">
+    <h2>What Clients Say</h2>
+    <p>"Rob got my fade looking right. Highly recommend!" – Jalen M.</p>
+    <p>"Cleanest beard lineup I’ve ever had." – Marcus D.</p>
+    <p>"Professional, fast, and on point. Rob is that guy." – Tito G.</p>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Book an Appointment</h2>
+    <p>📍 Las Vegas, NV<br>
+       📞 (702) 555-1234<br>
+       📸 <a href="https://instagram.com/robthabarber" target="_blank">@robthabarber</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Rob Tha Barber. All rights reserved.
+  </footer>
 </body>
 </html>
